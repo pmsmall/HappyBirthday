@@ -1,0 +1,93 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-25 09:07:37
+ * @LastEditTime: 2021-03-25 10:21:49
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \tiny-heart-master\birthday-mobile\Memories.html
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta
+          name="viewport"
+          content="width=device-width,initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no"
+  />
+  <title>Happy Birthday</title>
+  <script src="js/jquery-2.1.1.min.js"></script>
+
+</head>
+<style>
+  .countdown-container {
+    border: 2px solid grey;
+    padding: 10px;
+    background-color: rgba(78,78,78,.3);
+    font-family: 宋体;
+    color: white;
+    display: flex;
+  }
+</style>
+<body style="background-image: url('img/1411638194278_.pic.jpg');background-size:cover;background-repeat:no-repeat;">
+<audio muted src="music/page6bgm.mp3" autoplay="autoplay" loop="loop"></audio>
+<div class="countdown-container" style="margin-top:1703px; ">
+<h1 id="div1" style="width: 70%; margin: 0 auto; text-align: center; line-height: 6vh;font-size: 72px" ></h1>
+</div>
+<div style="width: 60%; margin: 0 auto">
+  <div style="display: inline-block; padding: 10px; font-size: 50px; text-align: center; background-color: #BBBBBB; margin-right: 30px; width: 40%;"
+       onclick="location.href='index.html'">
+    Secret World
+  </div>
+  <div style="display: inline-block; padding: 10px; font-size: 50px; text-align: center; background-color: #BBBBBB;width: 40%;"
+       onclick="location.href='page5.html'">
+    Eternal Moment
+  </div>
+</div>
+</div>
+</div>
+
+<script>
+  $(window).on('touchstart', function () {
+    $("audio")[0].play();
+  });
+
+
+  // 2021年8月29日19：25
+  var dataTime = "1630236300  ";
+  //时间戳转dddd-mm-dd HH24:hh:MM:ss
+  var d = new Date(dataTime * 1000);
+  var date = (d.getFullYear()) + "-" + (d.getMonth() + 1) + "-" + (d.getDate()) + "-" + (d.getHours()) + ":" + (d.getMinutes()) + ":" + (d.getSeconds());
+  var startTime = date;
+  console.info(startTime)
+
+  function count() {
+    var currTime = new Date(); //当前时间
+    //将xxxx-xx-xx的时间格式，转换为 xxxx/xx/xx的格式
+    startTime = startTime.replace(/\-/g, "/");
+    var sTime = new Date(startTime);
+    var totalTime = currTime.getTime() - sTime.getTime();
+    var days = parseInt(totalTime / parseInt(1000 * 60 * 60 * 24));
+    totalTime = totalTime % parseInt(1000 * 60 * 60 * 24);
+    var hours = parseInt(totalTime / parseInt(1000 * 60 * 60));
+    totalTime = totalTime % parseInt(1000 * 60 * 60);
+    var minutes = parseInt(totalTime / parseInt(1000 * 60));
+    totalTime = totalTime % parseInt(1000 * 60);
+    var seconds = parseInt(totalTime / parseInt(1000));
+    var time = "";
+    if (days >= 1) {
+      time = days + "天" + hours + "时" + minutes + "分" + seconds + "秒";
+    } else if (hours >= 1) {
+      time = hours + "时" + minutes + "分" + seconds + "秒";
+    } else if (minutes >= 1) {
+      time = minutes + "分" + seconds + "秒";
+    } else {
+      time = seconds + "秒";
+    }
+    document.getElementById("div1").innerHTML = "万老师，此刻，我已经认识你<br><span style='background-color: rgba(78,78,78,.3); font-family: 宋体;color: white;'>" + time + "</span>";
+    setTimeout("count()", 1000);
+  }
+
+  window.onload = count;
+</script>
+</body>
+</html>

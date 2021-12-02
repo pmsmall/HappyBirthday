@@ -142,8 +142,11 @@
 		bottom: 50%;
 		margin-bottom:50%;
 		overflow: hidden;
-		transform-origin:center bottom;
-		animation:box_to_point 18.5s 0s,bounce 2.5s 18.5s;
+
+
+
+		/*transform-origin:center bottom;*/
+		/*animation:box_to_point 59s 0s,bounce 2.5s 59s;*/
 	}
 }
 
@@ -154,13 +157,13 @@
 		height:50px;
 		background-color:#FFF;
 		border-radius: 25px;
-		position: absolute;
+		/*position: absolute;
 		left: 48%;
-		bottom: 50%;
+		bottom: 50%;*/
 		margin-bottom:50%;
-		overflow: hidden;
-		transform-origin:center bottom;
-		animation:box_to_point_mobile 18.5s 0s,bounce 2.5s 18.5s;
+		/*overflow: hidden;*/
+		/*transform-origin:center bottom;
+		animation:box_to_point_mobile 18.5s 0s,bounce 2.5s 18.5s;*/
 	}
 }
 
@@ -450,7 +453,7 @@
 	.ly-txt01 {
 		position:absolute;
 		width: 40%;
-		left:10%;
+		left:18%;
 		top:5%;
 	}
 	

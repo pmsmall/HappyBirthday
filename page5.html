@@ -1,0 +1,44 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-03-25 09:07:37
+ * @LastEditTime: 2021-03-25 10:21:49
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \tiny-heart-master\birthday-mobile\Memories.html
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta
+          name="viewport"
+          content="width=device-width,initial-scale=0.5, minimum-scale=0.5, maximum-scale=0.5, user-scalable=no"
+  />
+  <title>Happy Birthday</title>
+  <script src="js/jquery-2.1.1.min.js"></script>
+
+</head>
+<body style="background-color: #f0a6b0">
+<video autoplay id="myaudio" src="music/page5video.mp4" width="100%"/>
+<div id="page5button1" style="display: none">
+  HAPPY BIRTHDAD
+</div>
+
+<div id="page5button2" style="display: none">
+  ONE MORE TIMT
+</div>
+<script>
+  $(window).on('touchstart', function () {
+    $("video")[0].play();
+    setTimeout(function () {
+          $("#page5button1").css("display", "block")
+          $("#page5button2").css("display", "block")
+        }, 29000)
+  });
+  $("#page5button1").click(function () {
+    // 跳转page3
+    location.href = "index.html";
+  })
+</script>
+</body>
+</html>
