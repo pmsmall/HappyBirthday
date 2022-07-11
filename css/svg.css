@@ -1,0 +1,31 @@
+.svg-path-not-display{
+	display: none;
+}
+
+#animation_container{
+	background-color:rgba(255, 255, 255, 0.00); 
+	width:30%; 
+	height:30%;
+}
+
+#canvas{
+	position: relative; 
+	display: block; 
+	background-color:rgba(255, 255, 255, 0.00);
+	width:100%;
+	height:100%; 
+}
+
+#dom_overlay_container{
+	pointer-events:none; 
+	overflow:hidden; 
+	width:100%; 
+	height:100%; 
+	position: relative; 
+	left: 0px; 
+	top: 0px; 
+	display: block;
+}
+.bbb{
+	z-index: 100;
+}

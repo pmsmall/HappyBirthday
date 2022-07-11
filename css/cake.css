@@ -27,8 +27,8 @@ html, body {
     width: 100%;
     height: 100%;
     background: #ee9ca7;
-    background: -webkit-linear-gradient(top left, #ee9ca7 0%, #ee9ca7 100%);
-    background: linear-gradient(to bottom right, #ee9ca7 0%, #ee9ca7 100%);
+    background: -webkit-linear-gradient(top left, #8ed4ff 0%, #8ed4ff 100%);
+    background: linear-gradient(to bottom right, #8ed4ff 0%, #8ed4ff 100%);
 }
 
 .velas {
@@ -45,8 +45,9 @@ html, body {
     -webkit-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-animation: in 500ms 6s ease-out forwards;
-    animation: in 500ms 6s ease-out forwards;
+    -webkit-animation: in 500ms 10s ease-out forwards;
+    animation: in 500ms 10s ease-out forwards;
+	z-index: 100;
 }
 
 .velas:after,
@@ -384,11 +385,26 @@ html, body {
     position: absolute;
     text-align: center;
     overflow: hidden;
-    width: 100%;
+    /* width: 15%; */
+	height: 10%;
+	left: 0px;
+	right: 0px;
+	margin: auto;
     top: -100px;
     opacity: 0;
     font-size: 32px;
     color: #fff;
+}
+
+.name img{
+	position: relative;
+	margin: auto;
+	top: 0px;
+	bottom: 0px;
+	height: 100%;
+	width: 100%;
+	left: 0px;
+	right: 0px;
 }
 @keyframes btn1 {
     0% {
